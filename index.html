@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Antigravity Premium App - Modern Dashboard</title>
+    <meta name="description" content="A gorgeous, state-of-the-art interactive dashboard template. Built with rich aesthetics, glassmorphism, and dynamic animations.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <!-- CSS Link -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="dark-theme">
+    <!-- Background Glows -->
+    <div class="glow glow-1" id="glow-1"></div>
+    <div class="glow glow-2" id="glow-2"></div>
+
+    <div class="app-container">
+        <!-- Sidebar Navigation -->
+        <aside class="sidebar" id="app-sidebar">
+            <div class="brand">
+                <div class="logo-icon">▲</div>
+                <span class="brand-name">Antigravity</span>
+            </div>
+            <nav class="nav-menu">
+                <a href="#" class="nav-item active" id="nav-dashboard">
+                    <svg class="nav-icon" viewBox="0 0 24 24"><path d="M3 13h8V3H3v10zm0 8h8v-6H3v6zm10 0h8V11h-8v10zm0-18v6h8V3h-8z"/></svg>
+                    <span>Dashboard</span>
+                </a>
+                <a href="#" class="nav-item" id="nav-analytics">
+                    <svg class="nav-icon" viewBox="0 0 24 24"><path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zM9 17H7v-7h2v7zm4 0h-2V7h2v10zm4 0h-2v-4h2v4z"/></svg>
+                    <span>Analytics</span>
+                </a>
+                <a href="#" class="nav-item" id="nav-projects">
+                    <svg class="nav-icon" viewBox="0 0 24 24"><path d="M19 15v4H5v-4h14m1-2H4c-.55 0-1 .45-1 1v6c0 .55.45 1 1 1h16c.55 0 1-.45 1-1v-6c0-.55-.45-1-1-1zM7 18.5c-.82 0-1.5-.68-1.5-1.5s.68-1.5 1.5-1.5 1.5.68 1.5 1.5-.68 1.5-1.5 1.5zM19 5v4H5V5h14m1-2H4c-.55 0-1 .45-1 1v6c0 .55.45 1 1 1h16c.55 0 1-.45 1-1V4c0-.55-.45-1-1-1zM7 8.5c-.82 0-1.5-.68-1.5-1.5S6.18 5.5 7 5.5s1.5.68 1.5 1.5S7.82 8.5 7 8.5z"/></svg>
+                    <span>Projects</span>
+                </a>
+                <a href="#" class="nav-item" id="nav-settings">
+                    <svg class="nav-icon" viewBox="0 0 24 24"><path d="M19.14 12.94c.04-.3.06-.61.06-.94 0-.32-.02-.64-.07-.94l2.03-1.58c.18-.14.23-.41.12-.61l-1.92-3.32c-.12-.22-.37-.29-.59-.22l-2.39.96c-.5-.38-1.03-.7-1.62-.94l-.36-2.54c-.04-.24-.24-.41-.48-.41h-3.84c-.24 0-.43.17-.47.41l-.36 2.54c-.59.24-1.13.57-1.62.94l-2.39-.96c-.22-.08-.47 0-.59.22L2.74 8.87c-.12.21-.08.47.12.61l2.03 1.58c-.05.3-.09.63-.09.94s.02.64.07.94l-2.03 1.58c-.18.14-.23.41-.12.61l1.92 3.32c.12.22.37.29.59.22l2.39-.96c.5.38 1.03.7 1.62.94l.36 2.54c.05.24.24.41.48.41h3.84c.24 0 .44-.17.47-.41l.36-2.54c.59-.24 1.13-.56 1.62-.94l2.39.96c.22.08.47 0 .59-.22l1.92-3.32c.12-.22.07-.47-.12-.61l-2.01-1.58zM12 15.6c-1.98 0-3.6-1.62-3.6-3.6s1.62-3.6 3.6-3.6 3.6 1.62 3.6 3.6-1.62 3.6-3.6 3.6z"/></svg>
+                    <span>Settings</span>
+                </a>
+            </nav>
+            <div class="sidebar-footer">
+                <button class="theme-toggle-btn" id="theme-toggle" aria-label="Toggle dark and light mode">
+                    <span class="toggle-icon sun">☀️</span>
+                    <span class="toggle-icon moon">🌙</span>
+                </button>
+            </div>
+        </aside>
+
+        <!-- Main Workspace -->
+        <main class="main-content">
+            <!-- Header -->
+            <header class="app-header">
+                <div class="header-search">
+                    <input type="text" id="search-input" placeholder="Search analytics or projects...">
+                </div>
+                <div class="header-profile">
+                    <div class="notification-badge" id="notif-badge">
+                        <span class="pulse"></span>
+                        🔔
+                    </div>
+                    <div class="avatar" id="user-avatar">
+                        <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=100&q=80" alt="User profile picture">
+                    </div>
+                </div>
+            </header>
+
+            <!-- Grid Content -->
+            <div class="dashboard-grid">
+                <!-- Welcome Card -->
+                <div class="card welcome-card" id="card-welcome">
+                    <div class="welcome-text">
+                        <h1>Welcome back, Developer!</h1>
+                        <p>Your premium dashboard is fully set up and connected to GitHub. Here is a snapshot of your workspace metrics.</p>
+                        <button class="btn btn-primary" id="btn-quickstart">Explore Features</button>
+                    </div>
+                    <div class="welcome-graphic">▲</div>
+                </div>
+
+                <!-- Stats Cards -->
+                <div class="card stat-card" id="card-views">
+                    <div class="stat-header">
+                        <span class="stat-title">Repository Views</span>
+                        <span class="stat-badge growth">+14.2%</span>
+                    </div>
+                    <div class="stat-value">12,480</div>
+                    <div class="stat-footer">Compared to last week</div>
+                </div>
+
+                <div class="card stat-card" id="card-commits">
+                    <div class="stat-header">
+                        <span class="stat-title">Commits</span>
+                        <span class="stat-badge growth">+8.5%</span>
+                    </div>
+                    <div class="stat-value">342</div>
+                    <div class="stat-footer">24 active projects</div>
+                </div>
+
+                <!-- Chart Card -->
+                <div class="card chart-card" id="card-chart">
+                    <h2>Weekly Performance</h2>
+                    <div class="chart-container">
+                        <div class="bar-chart">
+                            <div class="bar" style="--height: 40%" data-label="Mon"></div>
+                            <div class="bar" style="--height: 60%" data-label="Tue"></div>
+                            <div class="bar" style="--height: 55%" data-label="Wed"></div>
+                            <div class="bar" style="--height: 85%" data-label="Thu"></div>
+                            <div class="bar active" style="--height: 100%" data-label="Fri"></div>
+                            <div class="bar" style="--height: 70%" data-label="Sat"></div>
+                            <div class="bar" style="--height: 45%" data-label="Sun"></div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Task List Card -->
+                <div class="card list-card" id="card-tasks">
+                    <h2>Active Checklists</h2>
+                    <ul class="task-list">
+                        <li class="task-item checked">
+                            <span class="checkbox">✓</span>
+                            <span class="task-name">Initialize Git Repository</span>
+                        </li>
+                        <li class="task-item checked">
+                            <span class="checkbox">✓</span>
+                            <span class="task-name">Build Premium UX Layout</span>
+                        </li>
+                        <li class="task-item">
+                            <span class="checkbox"></span>
+                            <span class="task-name">Connect with GitHub PAT</span>
+                        </li>
+                        <li class="task-item">
+                            <span class="checkbox"></span>
+                            <span class="task-name">Push Initial Commit to Remote</span>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </main>
+    </div>
+
+    <!-- JS Link -->
+    <script src="app.js"></script>
+</body>
+</html>
